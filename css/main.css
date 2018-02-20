@@ -8,8 +8,17 @@
   outline: none !important;
 }
 
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
 ::-webkit-scrollbar {
-  display: none;
+  width: 2px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
 }
 
 .preloader {
@@ -141,6 +150,7 @@ p {
 }
 
 .sorry {
+  display: none;
   opacity: 0;
   color: #000;
   text-align: center;
@@ -151,9 +161,10 @@ p {
 
 .loaded #thumb {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #000;
   color: #fff;
+  overflow: auto;
 }
 .loaded #thumb .text {
   text-align: center;
@@ -194,10 +205,15 @@ p {
   background-image: url(../img/bg/bg1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  background: #fff;
+  height: 100vh;
   width: 100vw;
   text-align: center;
   padding-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .loaded #skills h1 {
   margin: 20px 0;
@@ -216,10 +232,14 @@ p {
   background-image: url(../img/bg/bg3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   text-align: center;
   padding-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .loaded #site1 h1, .loaded #site2 h1 {
   margin: 20px 0;
@@ -252,11 +272,15 @@ p {
 .loaded footer {
   position: relative;
   z-index: 10;
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   background-color: #000;
   text-align: left;
-  padding: 40px 0;
+  padding: 40px 0 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .loaded footer p {
   color: #fff;
@@ -413,6 +437,7 @@ p {
   }
 
   .sorry {
+    display: block;
     opacity: 1;
   }
 }
